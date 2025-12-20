@@ -5,7 +5,7 @@
 #include "hardware/pwm.h"
 
 // Pin connected to the servo
-#define SERVO_PIN 6
+#define SERVO_PIN 15
 
 // Initialize servo PWM
 void servo_init(void);

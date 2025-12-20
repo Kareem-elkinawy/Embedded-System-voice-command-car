@@ -40,21 +40,28 @@ int main() {
     printf("Robot system initialized.\n");
 
     while (true) {
+        
+        while(1){
+            if(button_is_pressed()){
+            led_set_color(LED_RED);
+            break;
+        }
+        }
 
         // -------- WAIT FOR ACTIVATION --------
         printf("Press button or say 'Go Robot!' to activate...\n");
-        led_set_color(LED_RED);
-
-        while (1) {
-            if (button_is_pressed() || get_serial_input() == 'G') {
-                led_set_color(LED_GREEN);
-                printf("System Activated!\n");
-                break;
-            } else{
-                buzzer_error_pattern();
+            while (1) {
+                    if (get_serial_input() == 'G') {
+                        led_set_color(LED_GREEN);
+                        printf("System Activated!\n");
+                        break;
+                    } else{
+                        buzzer_error_pattern();
+                    }
+                    sleep_ms(20);
+                
             }
-            sleep_ms(20);
-        }
+        
 
         // -------- COMMAND LOOP --------
         while (1) {
@@ -66,7 +73,7 @@ int main() {
                 motor_stop();
                 led_set_color(LED_BLUE);
                 servo_push_reward();
-                led_set_color(LED_GREEN);
+                led_set_color(LED_OFF);
 
                 break;  // back to waiting mode
             }

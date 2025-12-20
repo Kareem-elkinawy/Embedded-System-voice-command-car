@@ -1,5 +1,7 @@
 #include "servo_driver.h"
 #include <stdio.h>
+#include <stdlib.h>   // <-- required for abs()
+
 
 static uint pwm_slice_num;
 

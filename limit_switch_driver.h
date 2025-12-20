@@ -5,7 +5,7 @@
 #include <stdbool.h>
 
 // Your limit switch pin
-#define LIMIT_SWITCH_PIN 12
+#define LIMIT_SWITCH_PIN 22
 
 
 // Setup GPIO + debounce + interrupt

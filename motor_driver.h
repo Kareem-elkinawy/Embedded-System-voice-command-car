@@ -5,14 +5,15 @@
 #include "hardware/pwm.h"
 
 // Left Motor pins
-#define MOTOR_L_IN1 21
-#define MOTOR_L_IN2 20
-#define MOTOR_L_EN  22   // PWM pin
+#define MOTOR_L_IN1 2
+#define MOTOR_L_IN2 3
+#define MOTOR_L_EN  17   // PWM pin
 
 // Right Motor pins
-#define MOTOR_R_IN1 18
-#define MOTOR_R_IN2 17
-#define MOTOR_R_EN  19  // PWM pin
+#define MOTOR_R_IN1 16
+#define MOTOR_R_IN2 27
+
+#define MOTOR_R_EN  0  // PWM pin
 
 // Initialize both motors
 void motor_init(void);
