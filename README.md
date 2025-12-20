@@ -195,23 +195,23 @@ python -c "import serial; print(serial.Serial('COM4'))"
 ``` 
 ## Code Structure 
 ``` 
-. 
+
 ├── main.c                      
 ├── button_driver.c/h           
-# Main control loop 
-# Push button initialization 
-├── limit_switch_driver.c/h     # ISR-based limit switch with debounce 
+├── limit_switch_driver.c/h     
 ├── led_driver.c/h              
 ├── buzzer_driver.c/h           
 ├── motor_driver.c/h            
 ├── servo_driver.c/h            
 ├── PYTHON_MIC 
+├── voice_commands.py           
+└── CMakeLists.txt 
+# Main control loop 
+# Push button initialization 
 # RGB LED control 
 # Buzzer patterns 
 # DC motor PWM control 
-# Servo positioning and smooth rotation 
-├── voice_commands.py           
-└── CMakeLists.txt             
+# Servo positioning and smooth rotation        
 # Voice recognition and serial interface 
 # Build configuration 
 
